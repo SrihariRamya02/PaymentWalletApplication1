@@ -10,7 +10,7 @@ services:
     links:
       - postgres_db:database2
   postgres_db:
-    image: "postgres:latest"
+    image: "postgres:14"
     restart: always
     ports:
       - 5432:5432
