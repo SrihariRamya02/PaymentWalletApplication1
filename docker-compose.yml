@@ -4,13 +4,13 @@ services:
     build: .
     restart: always
     ports:
-      - 8086:8086
+      - 8085:8085
     depends_on:
       - postgres_db
     links:
-      - postgres_db:database2
+      - postgres_db:database
   postgres_db:
-    image: "postgres:14"
+    image: "postgres:latest"
     restart: always
     ports:
       - 5432:5432
